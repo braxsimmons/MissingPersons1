@@ -27,7 +27,7 @@
       </thead>
       <tbody>
         {% for item in jsonData %}
-          <tr>
+          {% comment %} (the "for" section above populates the table without needing this section) <tr>
             <td>{{ item.date_missing }}</td>
             <td>{{ item.last_name }}</td>
             <td>{{ item.first_name }}</td>
@@ -36,7 +36,7 @@
             <td>{{ item.state }}</td>
             <td>{{ item.gender }}</td>
             <td>{{ item.race }}</td>
-          </tr>
+          </tr> {% endcomment %}
         {% endfor %}
       </tbody>
       
