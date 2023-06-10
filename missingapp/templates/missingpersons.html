@@ -7,11 +7,12 @@
   <title>Human Trafficking Statistics</title>
   {% load static %}
   <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+  <script src="{% static 'sorttable.js' %}"></script>
 </head>
 <body>
   <div class="container">
-    <h1>Missing Persons Cases Found in Utah</h1>
-    <table class="table table-bordered">
+    <p><h1>Missing Persons Cases Found in Utah</h1></p>
+    <table class="table table-bordered sortable">
       <thead class="thead-dark">
         <tr>
           <th>Date Missing</th>
