@@ -4,21 +4,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-  <!-- Website title -->
   <title>Human Trafficking Statistics</title>
-
-  <!-- Load CSS/Bootstrap -->
   {% load static %}
   <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-  <script src="{% static 'sorttable.js' %}"></script>
 </head>
 <body>
-
-  <!-- Table formatting for missing persons -->
   <div class="container">
-    <p><h1>Missing Persons Cases Found in Utah</h1></p>
-    <table class="table table-bordered sortable table-striped">
+    <h1>Missing Persons Cases Found in Utah</h1>
+    <table class="table table-bordered sortable table-hover table-dark">
       <thead class="thead-dark">
         <tr>
           <th>Date Missing</th>
@@ -26,16 +19,34 @@
           <th>First Name</th>
           <th>Age at Missing</th>
           <th>City</th>
-          <th class="sorttable_nosort">State</th>
+          <th>State</th>
           <th>Gender</th>
           <th>Race</th>
         </tr>
       </thead>
+      <tbody>
+        {% for item in jsonData %}
+          <tr>
+            <td>{{ item.date_missing }}</td>
+            <td>{{ item.last_name }}</td>
+            <td>{{ item.first_name }}</td>
+            <td>{{ item.age_at_missing }}</td>
+            <td>{{ item.city }}</td>
+            <td>{{ item.state }}</td>
+            {%if item.gender == 'F'%}
+            <td style="background-color:pink;">{{ item.gender }}</td>
+            {%elif item.gender == 'M'%}
+            <td style="background-color:#087990;">{{ item.gender }}</td>
+            {% endif %}
+            <td>{{ item.race }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+      
     </table>
   </div>
 
-  <!-- Provided data to be formatted within table -->
-  <script>
+  {% comment %} <script>
     // JSON data
     var jsonData = [
                         {
@@ -253,6 +264,7 @@
 
       document.querySelector("tbody").appendChild(row);
     }
-  </script>
+  </script> {% endcomment %}
 </body>
 </html>
+
