@@ -1,15 +1,21 @@
 <!-- Missing Persons 1 -->
-<!-- Group 4: Braxdon Simmons, Dylan Mattern, Mckay Abott, Blake McAvoy, Saxon Cullimore, Aly Leavitt-->
+<!-- Group 4: Braxdon Simmons, Dylan Mattern, Mckay Abott, Blake McAvoy, Saxon Cullimore, Aly Leavitt -->
 
 <!DOCTYPE html>
 <html>
 <head>
+
+  <!-- Website title -->
   <title>Human Trafficking Statistics</title>
+
+  <!-- Load CSS/Bootstrap -->
   {% load static %}
   <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
   <script src="{% static 'sorttable.js' %}"></script>
 </head>
 <body>
+
+  <!-- Table formatting for missing persons -->
   <div class="container">
     <p><h1>Missing Persons Cases Found in Utah</h1></p>
     <table class="table table-bordered sortable table-striped">
@@ -25,25 +31,10 @@
           <th>Race</th>
         </tr>
       </thead>
-      <tbody>
-        {% comment %} {% for item in jsonData %}
-          <tr>
-            (This section is not necessary, table is created with JSON data below)
-            <td>{{ item.date_missing }}</td>
-            <td>{{ item.last_name }}</td>
-            <td>{{ item.first_name }}</td>
-            <td>{{ item.age_at_missing }}</td>
-            <td>{{ item.city }}</td>
-            <td>{{ item.state }}</td>
-            <td>{{ item.gender }}</td>
-            <td>{{ item.race }}</td>
-          </tr>
-        {% endfor %} {% endcomment %}
-      </tbody>
-      
     </table>
   </div>
 
+  <!-- Provided data to be formatted within table -->
   <script>
     // JSON data
     var jsonData = [
@@ -265,4 +256,3 @@
   </script>
 </body>
 </html>
-
