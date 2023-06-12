@@ -1,3 +1,5 @@
+// Code for how each colum of missing persons data can be sorted either asc or desc:
+
 /*
   SortTable
   version 2
