@@ -1,12 +1,9 @@
 <!-- Missing Persons 1 -->
 <!-- Group 4: Braxdon Simmons, Dylan Mattern, Mckay Abott, Blake McAvoy, Saxon Cullimore, Aly Leavitt -->
 
-<!DOCTYPE html>
-<html>
-<head>
-  <!-- Website title -->
-  <title>Human Trafficking Statistics</title>
+{%extends "base.html"%}
   <!-- Load CSS/Bootstrap -->
+  {% block content%}
   {% load static %}
   <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
   <script src="{% static 'sorttable.js' %}"></script>
@@ -50,7 +47,7 @@
       
     </table>
   </div>
-
+{%endblock%}
   {% comment %} <script>
     // JSON data
     var jsonData = [

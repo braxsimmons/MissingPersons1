@@ -179,4 +179,7 @@ def missing_persons(request):
                         }
                         ] 
 
-    return render(request, "missingpersons.html", {'jsonData': jsonData})
+    return render(request, "missingapp/missingpersons.html", {'jsonData': jsonData})
+
+def landingpageview(request):
+    return render(request, "missingapp/landingpage.html")

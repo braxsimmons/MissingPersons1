@@ -1,6 +1,6 @@
-from django.urls import path
-from missingapp import views
-
+from django.contrib import admin
+from django.urls import path, include
 urlpatterns = [
-    path('', views.missing_persons, name='missingpersons'),
+    path('admin/', admin.site.urls),
+    path('', include("missingapp.urls"))
 ]
