@@ -17,8 +17,36 @@
         </div>
     </div>
 </nav>
-        <h1>{{ item.first_name }} {{ item.last_name }}</h1>
-        <p>Date Missing: {{ item.date_missing }}</p>
-        <p>Age at missing: {{ item.age_at_missing }}</p>
+<section class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mb-4 mb-sm-5">
+                <div class="card card-style1 border-0">
+                    <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0">
+                                <img src="https://bloximages.chicago2.vip.townnews.com/ravallirepublic.com/content/tncms/assets/v3/editorial/6/3a/63a30368-9b2d-11e6-afd0-4f62300e7c4a/581024dd5298f.image.png"
+                                alt="Missing Person Icon" width=400 >
+                            </div>
+                            <div class="col-lg-6 px-xl-10">
+                                <div class="bg-secondary d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                    <h3 class="h2 text-white mb-0">{{ item.first_name }} {{ item.last_name }}</h3>
+                                    <span class="text-primary">{{item.city}}, {{item.state}}</span>
+                                </div>
+                                <ul class="list-unstyled mb-1-9">
+                                  <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Date Missing:</span> {{item.date_missing}}</li>
+                                  <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Age at missing:</span> {{item.age_at_missing}}</li>
+                                  <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Gender:</span> {{item.gender}}</li>
+                                  <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Race:</span> {{item.race}}</li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
 {%endblock%}
 </html>
