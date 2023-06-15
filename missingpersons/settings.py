@@ -1,3 +1,4 @@
+#Authors: Group 4: Braxdon Simmons, Dylan Mattern, Mckay Abott, Blake McAvoy, Saxon Cullimore, Aly Leavitt
 """
 Django settings for missingpersons project.
 
@@ -77,10 +78,15 @@ WSGI_APPLICATION = 'missingpersons.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'University',
+    'USER': 'postgres',
+    'PASSWORD': 'Tennis14',
+    'HOST': '127.0.0.1',
+    'PORT': '5432',
     }
-}
+}  
+
 
 
 # Password validation
