@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'missingpersons.wsgi.application'
 DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'University',
+    'NAME': 'missing_persons',
     'USER': 'postgres',
-    'PASSWORD': 'Tennis14',
+    'PASSWORD': 'Hauula2019!',
     'HOST': '127.0.0.1',
     'PORT': '5432',
     }
