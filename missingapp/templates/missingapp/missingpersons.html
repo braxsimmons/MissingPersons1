@@ -41,12 +41,12 @@
       </thead>
       <tbody>
         <!-- Provided data to be formatted within table -->
-        {% for item in jsonData %}
+        {% for item in persons %}
           <tr>
-            <td>{{ item.date_missing }}</td>
-            <td>{{ item.last_name }}</td>
-            <td><a href="{% url 'person_details' first_name=item.first_name %}">{{ item.first_name }}</td>
-            <td>{{ item.age_at_missing }}</td>
+            <td>{{ item.dateMissing }}</td>
+            <td>{{ item.lastName }}</td>
+            <td><a href="{% url 'person_details' first_name=item.firstName %}">{{ item.firstName }}</td>
+            <td>{{ item.ageMissing }}</td>
             <td>{{ item.city }}</td>
             <td>{{ item.state }}</td>
             {%if item.gender == 'F'%}
