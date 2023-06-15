@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'missingapp',
+    'missingapp.apps.MissingappConfig',
     
 ]
 
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'missingpersons.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,7 +81,7 @@ DATABASES = {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
     'NAME': 'missing_persons',
     'USER': 'postgres',
-    'PASSWORD': 'Hauula2019!',
+    'PASSWORD': '787346',
     'HOST': '127.0.0.1',
     'PORT': '5432',
     }
