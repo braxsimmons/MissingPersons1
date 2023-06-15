@@ -7,7 +7,7 @@ class Person (models.Model):
     ageMissing = models.IntegerField(default=1)
     city = models.CharField(max_length=50, default='city unknown')
     state = models.CharField(max_length=50, default='state unknown')
-    gender = models.CharField(max_length=50, default='gender unknown')
+    gender = models.CharField(max_length=50, default='gender unknown (M or F only)')
     race  = models.CharField(max_length=50, default='race unknown')
 # Create your models here.
 
