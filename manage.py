@@ -1,5 +1,6 @@
-#!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
+# Missing Persons 1
+# Group 4: Braxdon Simmons, Dylan Mattern, Mckay Abott, Blake McAvoy, Saxon Cullimore, Aly Leavitt
+
 import os
 import sys
 
