@@ -1,7 +1,7 @@
 from django.db import models
 
 class Person (models.Model):
-    dateMissing = models.CharField(max_length=50, default='name date')
+    dateMissing = models.CharField(max_length=50, default='date unknown')
     lastName = models.CharField(max_length=50, default='name unknown')
     firstName = models.CharField(max_length=50, default='name unknown')
     ageMissing = models.IntegerField(default=1)
