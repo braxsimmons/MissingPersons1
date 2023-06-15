@@ -1,14 +1,17 @@
 from django.db import models
 
 class Person (models.Model):
-    dateMissing = models.CharField(max_length=50, default='date unknown')
-    lastName = models.CharField(max_length=50, default='name unknown')
-    firstName = models.CharField(max_length=50, default='name unknown')
+    dateMissing = models.DateField(blank=True)
+    lastName = models.CharField(max_length=50, default='Unknown')
+    firstName = models.CharField(max_length=50, default='Unknown')
     ageMissing = models.IntegerField(default=1)
-    city = models.CharField(max_length=50, default='city unknown')
-    state = models.CharField(max_length=50, default='state unknown')
-    gender = models.CharField(max_length=50, default='gender unknown (M or F only)')
-    race  = models.CharField(max_length=50, default='race unknown')
+    city = models.CharField(max_length=50, default='Unknown')
+    state = models.CharField(max_length=50, default='Unknown')
+    GENDER_CHOICES = (
+        ('M', 'Male'),
+        ('F', 'Female'),)
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
+    race  = models.CharField(max_length=50, default='Unknown')
 # Create your models here.
 
 # use class meta: db_table = "container" to link to container table on missingpersons.html
