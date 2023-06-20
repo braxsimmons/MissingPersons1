@@ -12,6 +12,14 @@ def missing_persons(request):
 def landingpageview(request):
     return render(request, "missingapp/landingpage.html")
 
+def person_details(request, firstName):
+    person = get_object_or_404(Person, firstName=firstName)
+    context = {
+        'person': person
+    }
+
+    return render(request, 'missingapp/persondetails.html', context)
+
 # def person_details(request, first_name):
 #     jsonData = [
 #                         {
@@ -194,11 +202,3 @@ def landingpageview(request):
 #         if item['first_name'] == first_name:
 #             person= item
 #     return render(request, "missingapp/persondetails.html", {'item': person})
-
-def person_details(request, firstName):
-    person = get_object_or_404(Person, firstName=firstName)
-    context = {
-        'person': person
-    }
-
-    return render(request, 'missingapp/persondetails.html', context)
