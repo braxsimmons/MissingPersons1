@@ -45,7 +45,7 @@
           <tr>
             <td>{{ item.dateMissing }}</td>
             <td>{{ item.lastName }}</td>
-            <td><a href="{% url 'person_details' first_name=item.firstName %}">{{ item.firstName }}</td>
+            <td><a href="{% url 'person_details' firstName=item.firstName %}">{{ item.firstName }}</a></td>
             <td>{{ item.ageMissing }}</td>
             <td>{{ item.city }}</td>
             <td>{{ item.state }}</td>
